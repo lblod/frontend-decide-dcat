@@ -23,7 +23,5 @@ module.exports = function (defaults) {
     },
   });
 
-  app.import('node_modules/leaflet/dist/leaflet.css');
-
   return app.toTree();
 };
