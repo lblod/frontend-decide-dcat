@@ -91,10 +91,7 @@
     "edition": "octane"
   },
   "dependencies": {
-    "@lblod/ember-mock-login": "^0.14.0",
     "ember-concurrency": "^4.0.6",
-    "ember-data-table": "^2.1.0",
-    "ember-simple-auth": "^6.1.0",
-    "qrcode": "^1.5.4"
+    "ember-data-table": "^2.1.0"
   }
 }

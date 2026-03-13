@@ -3,7 +3,6 @@ import { service } from '@ember/service';
 
 export default class DcatDatasetsRoute extends Route {
   @service store;
-  @service session;
   max_size = 100;
 
   queryParams = {
@@ -14,10 +13,6 @@ export default class DcatDatasetsRoute extends Route {
       refreshModel: true,
     },
   };
-
-  async beforeModel(transition) {
-    this.session.requireAuthentication(transition, 'login');
-  }
 
   async model(params) {
     // This is a mirror image of <../../../controllers/dcat/datasets/index.js>. The code is duplicated here
