@@ -1,4 +1,4 @@
-# frontend-decide
+# frontend-decide-dcat
 
 > [!Warning]
 > This is a very early stage application, it is absolutely not production ready yet and it mostly there for quickly testing things for now
