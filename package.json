@@ -1,11 +1,11 @@
 {
-  "name": "frontend-decide",
-  "version": "0.0.3",
+  "name": "frontend-decide-dcat",
+  "version": "0.0.4",
   "private": true,
-  "description": "Frontend for the DECIDe app",
+  "description": "Frontend for the DCAT catalogue in the DECIDe app",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lblod/frontend-decide.git"
+    "url": "git+https://github.com/lblod/frontend-decide-dcat.git"
   },
   "license": "MIT",
   "author": "redpencil.io",
