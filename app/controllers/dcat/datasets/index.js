@@ -12,7 +12,7 @@ export default class DcatDatasetsController extends Controller {
   @tracked model;
   @tracked searchTerm = '';
   @tracked page = 0;
-  @tracked size = 2;
+  @tracked size = 5;
   max_size = 100;
 
   queryStore = task(async () => {
