@@ -2,7 +2,7 @@
 
 module.exports = function (environment) {
   const ENV = {
-    modulePrefix: 'frontend-decide',
+    modulePrefix: 'frontend-decide-dcat',
     environment,
     rootURL: '/',
     locationType: 'history',

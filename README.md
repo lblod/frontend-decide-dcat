@@ -19,7 +19,7 @@ You will need the following things properly installed on your computer.
 ## Installation
 
 - `git clone <repository-url>` this repository
-- `cd frontend-decide`
+- `cd frontend-decide-dcat`
 - `npm install`
 
 ## Running / Development
