@@ -28,6 +28,10 @@ module.exports = function (environment) {
       // switchRedirectUrl: '{{OAUTH_SWITCH_URL}}',
     },
 
+    features: {
+      'sparql-endpoint': '{{ENABLE_SPARQL_ENDPOINT}}',
+    },
+
     yasgui: {
       // NOTE: look at app/modifiers/yasgui.js when changing this variable
       defaultQuery: 'EMBER_YASGUI_DEFAULT_QUERY',
