@@ -27,6 +27,12 @@ module.exports = function (environment) {
       redirectUrl: '{{OAUTH_API_REDIRECT_URL}}',
       // switchRedirectUrl: '{{OAUTH_SWITCH_URL}}',
     },
+
+    yasgui: {
+      // NOTE: look at app/modifiers/yasgui.js when changing this variable
+      defaultQuery: 'EMBER_YASGUI_DEFAULT_QUERY',
+      extraPrefixes: 'EMBER_YASGUI_EXTRA_PREFIXES',
+    },
   };
 
   if (environment === 'development') {

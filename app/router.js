@@ -21,6 +21,8 @@ Router.map(function () {
     });
   });
 
+  this.route('sparql');
+
   this.route('route-not-found', {
     path: '/*wildcard',
   });

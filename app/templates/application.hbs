@@ -21,6 +21,11 @@
             <li class="au-c-list-horizontal__item">
               <AuLink @route="dcat.catalogs">Catalogs</AuLink>
             </li>
+            {{#if (is-feature-enabled "sparql-endpoint")}}
+              <li class="au-c-list-horizontal__item">
+                <AuLink @route="sparql">Sparql</AuLink>
+              </li>
+            {{/if}}
           </ol>
         </nav>
       </AuToolbar>
