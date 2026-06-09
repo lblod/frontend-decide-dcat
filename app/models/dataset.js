@@ -16,7 +16,8 @@ export default class DatasetModel extends Model {
 
   @belongsTo('agent', { async: true, inverse: null }) publisher;
   @belongsTo('catalog', { async: true, inverse: 'datasets' }) catalog;
-  @belongsTo('catalog-record', { async: true, inverse: 'primaryTopic' }) primaryTopic;
+  @belongsTo('catalog-record', { async: true, inverse: 'primaryTopic' })
+  primaryTopic;
   @hasMany('concept', { async: true, inverse: 'datasets' }) themes;
   @hasMany('distribution', { async: true, inverse: 'dataset' }) distributions;
 }

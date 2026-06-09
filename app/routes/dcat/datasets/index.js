@@ -29,7 +29,7 @@ export default class DcatDatasetsRoute extends Route {
     if (params.searchTerm) {
       opts['filter[:or:]'] = params.searchTerm;
       opts['filter[:or:][distributions]'] = params.searchTerm;
-    };
+    }
     return this.store.query('dataset', opts);
   }
 }

@@ -5,7 +5,10 @@ export default class DcatDistributionsDistributionRoute extends Route {
   @service store;
 
   async model(params) {
-    const distribution = await this.store.findRecord('distribution', params.distribution_id);
+    const distribution = await this.store.findRecord(
+      'distribution',
+      params.distribution_id,
+    );
     return distribution;
   }
 }

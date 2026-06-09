@@ -13,6 +13,6 @@ export default class DistributionModel extends Model {
   @attr mediaType;
   @attr byteSize;
 
-  @belongsTo('dataset', { async: true, inverse: 'distributions'}) dataset;
+  @belongsTo('dataset', { async: true, inverse: 'distributions' }) dataset;
   @belongsTo('format', { async: true, inverse: 'distributions' }) format;
 }

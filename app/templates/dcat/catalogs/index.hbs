@@ -2,7 +2,10 @@
 <AuList as |Item|>
   {{#each @model.catalogs as |catalog|}}
     <Item>
-      <AuLink @route="dcat.catalogs.catalog" @model={{catalog}}>{{catalog.title}}
+      <AuLink
+        @route="dcat.catalogs.catalog"
+        @model={{catalog}}
+      >{{catalog.title}}
       </AuLink>
     </Item>
   {{/each}}

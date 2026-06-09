@@ -29,7 +29,7 @@ export default class DcatDatasetsController extends Controller {
     if (this.searchTerm) {
       opts['filter[:or:]'] = this.searchTerm;
       opts['filter[:or:][distributions]'] = this.searchTerm;
-    };
+    }
     const dataset = await this.store.query('dataset', opts);
     return dataset;
   });

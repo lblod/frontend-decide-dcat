@@ -6,9 +6,15 @@ export default class DcatCatalogsCatalogsRoute extends Route {
 
   async model() {
     const catalogs = await this.store.query('catalog', {
-      include: ['record', 'publisher', 'theme-taxonomy', 'datasets.distributions', 'datasets.themes', 'datasets.publisher', 'datasets.distributions.format'].join(
-        ',',
-      ),
+      include: [
+        'record',
+        'publisher',
+        'theme-taxonomy',
+        'datasets.distributions',
+        'datasets.themes',
+        'datasets.publisher',
+        'datasets.distributions.format',
+      ].join(','),
     });
     return { catalogs };
   }
