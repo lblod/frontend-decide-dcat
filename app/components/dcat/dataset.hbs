@@ -78,7 +78,7 @@
                 @route="dcat.distributions.distribution"
                 @model={{dist}}
                 @icon="file"
-              >{{dist.title}}</AuLink></Item>
+              >{{or dist.title dist.id}}</AuLink></Item>
           {{/each}}
         </AuList>
       </tr>
@@ -87,12 +87,18 @@
   <:footer>
     <tr>
       <td>Catalog</td>
-      <td><AuLink
-          @route="dcat.catalogs.catalog"
-          @model={{@dataset.catalog}}
-          @icon="chevron-up"
-          @skin="secondary"
-        >{{@dataset.catalog.title}}</AuLink></td>
+      <td>
+        {{#if @dataset.hasCatalog}}
+          <AuLink
+            @route="dcat.catalogs.catalog"
+            @model={{@dataset.catalog}}
+            @icon="chevron-up"
+            @skin="secondary"
+          >{{or @dataset.catalog.title @dataset.catalog.id}}</AuLink>
+        {{else}}
+          /
+        {{/if}}
+      </td>
     </tr>
   </:footer>
 </AuTable>
