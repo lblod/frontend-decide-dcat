@@ -54,7 +54,7 @@
                                   @skin="primary"
                                   @route="dcat.distributions.distribution"
                                   @model={{distribution}}
-                                >{{distribution.title}}</AuLink></AuButton>
+                                >{{or distribution.title distribution.id}}</AuLink></AuButton>
                             {{/each}}
                           </AuDropdown>
                         {{/if}}
