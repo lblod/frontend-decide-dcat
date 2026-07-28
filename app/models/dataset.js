@@ -24,4 +24,12 @@ export default class DatasetModel extends Model {
   get hasCatalog() {
     return Boolean(this.catalog?.id);
   }
+
+  get label() {
+    if (this.title && this.title?.trim() !== '') {
+      return this.title;
+    }
+
+    return this.id;
+  }
 }

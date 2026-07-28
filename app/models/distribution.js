@@ -15,4 +15,12 @@ export default class DistributionModel extends Model {
 
   @belongsTo('dataset', { async: true, inverse: 'distributions' }) dataset;
   @belongsTo('format', { async: true, inverse: 'distributions' }) format;
+
+  get label() {
+    if (this.title && this.title?.trim() !== '') {
+      return this.title;
+    }
+
+    return this.accessUrl ?? this.id;
+  }
 }

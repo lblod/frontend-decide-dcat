@@ -17,4 +17,12 @@ export default class CatalogModel extends Model {
   themeTaxonomy;
   @belongsTo('catalog-record', { async: true, inverse: 'catalog' }) record;
   @hasMany('dataset', { async: true, inverse: 'catalog' }) datasets;
+
+  get label() {
+    if (this.title && this.title?.trim() !== '') {
+      return this.title;
+    }
+
+    return this.id;
+  }
 }
