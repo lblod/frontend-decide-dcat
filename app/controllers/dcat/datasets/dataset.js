@@ -15,7 +15,7 @@ export default class DcatDatasetsDatasetController extends Controller {
     const odrlPolicyTtl = odrlPolicy?.ttl;
 
     if (!odrlPolicyTtl) {
-      this.toaster.error('Could not find a ODRL-policy', undefined, {
+      this.toaster.error('ODRL-policy for dataset not found', undefined, {
         timeOut: 5000,
       });
       return;

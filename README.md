@@ -72,7 +72,7 @@ let ENV = {
   features: {
     "new-feature": true, // Enable the 'new-feature' by default
     "beta-feature": false, // Disable the 'beta-feature' by default
-    "other-feature": '{{ENABLE_SPARQL_ENDPOINT}}', // Enable/disable based on environment variable
+    "other-feature": "{{ENABLE_SPARQL_ENDPOINT}}", // Enable/disable based on environment variable
   },
 };
 ```
@@ -117,5 +117,5 @@ Or in template files by using the `is-feature-enabled` helper:
 ### List of feature flags
 
 | Name            | Description                                           |
-|-----------------|-------------------------------------------------------|
+| --------------- | ----------------------------------------------------- |
 | sparql-endpoint | Enable a `/sparql` route offering a yasgui SPARQL GUI |
