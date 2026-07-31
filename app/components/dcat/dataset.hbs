@@ -94,9 +94,9 @@
             @model={{@dataset.catalog}}
             @icon="chevron-up"
             @skin="secondary"
-          >{{or @dataset.catalog.title @dataset.catalog.id}}</AuLink>
+          >{{@dataset.catalog.label}}</AuLink>
         {{else}}
-          /
+          N/A
         {{/if}}
       </td>
     </tr>
