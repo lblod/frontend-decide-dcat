@@ -1,12 +1,40 @@
 {{page-title "DCAT"}}
-<AuList as |Item|>
-  {{#each @model.catalogs as |catalog|}}
-    <Item>
-      <AuLink
-        @route="dcat.catalogs.catalog"
-        @model={{catalog}}
-      >{{catalog.title}}
-      </AuLink>
-    </Item>
-  {{/each}}
-</AuList>
+
+<div class="au-c-main-container" itemprop="mainContentOfPage">
+  <div
+    class="au-c-main-container__content au-c-main-container__content--scroll"
+  >
+    <main id="content">
+      <div class="au-o-region-large">
+        <div class="au-o-layout">
+          <AuHeading @skin="2" class="au-u-margin-bottom">Catalogs</AuHeading>
+          <AuList as |Item|>
+            {{#each @model.catalogs as |catalog|}}
+              <Item>
+                <AuCard as |c|>
+                  <c.header>
+                    <AuHeading @level="2" @skin="4">
+                      {{catalog.label}}
+                    </AuHeading>
+                  </c.header>
+                  <c.content>
+                    <p>{{or catalog.description "/"}}</p>
+                  </c.content>
+                  <c.footer>
+                    <p>
+                      <AuLink
+                        @skin="button"
+                        @route="dcat.catalogs.catalog"
+                        @model={{catalog}}
+                      >View catalog</AuLink>
+                    </p>
+                  </c.footer>
+                </AuCard>
+              </Item>
+            {{/each}}
+          </AuList>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>

@@ -26,7 +26,7 @@
                   <AuCard as |c|>
                     <c.header>
                       <AuHeading @level="2" @skin="4">
-                        {{dataset.title}}
+                        {{dataset.label}}
                       </AuHeading>
                     </c.header>
                     <c.content>
@@ -54,7 +54,7 @@
                                   @skin="primary"
                                   @route="dcat.distributions.distribution"
                                   @model={{distribution}}
-                                >{{distribution.title}}</AuLink></AuButton>
+                                >{{distribution.label}}</AuLink></AuButton>
                             {{/each}}
                           </AuDropdown>
                         {{/if}}

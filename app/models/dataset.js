@@ -20,4 +20,16 @@ export default class DatasetModel extends Model {
   primaryTopic;
   @hasMany('concept', { async: true, inverse: 'datasets' }) themes;
   @hasMany('distribution', { async: true, inverse: 'dataset' }) distributions;
+
+  get hasCatalog() {
+    return Boolean(this.catalog?.id);
+  }
+
+  get label() {
+    if (this.title && this.title?.trim() !== '') {
+      return this.title;
+    }
+
+    return this.id;
+  }
 }
