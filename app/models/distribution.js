@@ -12,9 +12,9 @@ export default class DistributionModel extends Model {
   @attr downloadUrl;
   @attr mediaType;
   @attr byteSize;
+  @attr format;
 
   @belongsTo('dataset', { async: true, inverse: 'distributions' }) dataset;
-  @belongsTo('format', { async: true, inverse: 'distributions' }) format;
 
   get label() {
     if (this.title && this.title?.trim() !== '') {

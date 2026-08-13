@@ -13,7 +13,6 @@ export default class DcatCatalogsCatalogsRoute extends Route {
         'datasets.distributions',
         'datasets.themes',
         'datasets.publisher',
-        'datasets.distributions.format',
       ].join(','),
     });
     return { catalogs };
