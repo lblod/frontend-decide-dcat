@@ -71,7 +71,7 @@
     </tr>
     <tr>
       <td>Distributions</td>
-      <tr>
+      <td>
         <AuList as |Item|>
           {{#each @dataset.distributions as |dist|}}
             <Item><AuLink
@@ -81,11 +81,11 @@
               >{{dist.label}}</AuLink></Item>
           {{/each}}
         </AuList>
-      </tr>
+      </td>
     </tr>
     <tr>
       <td>Dataservices</td>
-      <tr>
+      <td>
         <AuList as |Item|>
           {{#each @dataset.dataServices as |service|}}
             <Item>
@@ -95,7 +95,7 @@
             </Item>
           {{/each}}
         </AuList>
-      </tr>
+      </td>
     </tr>
   </:body>
   <:footer>
