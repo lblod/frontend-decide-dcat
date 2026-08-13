@@ -17,8 +17,8 @@ export default class DcatDatasetsDatasetController extends Controller {
       const odrlPolicyTtlResult = await fetch(
         `/dcat/dataset/${this.model.id}/policy/ttl`,
         {
-          headers: { 'Accept': 'application/json'}
-        }
+          headers: { Accept: 'application/json' },
+        },
       );
       const odrlPolicy = await odrlPolicyTtlResult.json();
       odrlPolicyTtl = odrlPolicy?.ttl;

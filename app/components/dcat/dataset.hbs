@@ -83,6 +83,20 @@
         </AuList>
       </tr>
     </tr>
+    <tr>
+      <td>Dataservices</td>
+      <tr>
+        <AuList as |Item|>
+          {{#each @dataset.dataServices as |service|}}
+            <Item>
+              <AuLinkExternal @href={{service.endpointUrl}}>
+                {{service.title}}
+              </AuLinkExternal>
+            </Item>
+          {{/each}}
+        </AuList>
+      </tr>
+    </tr>
   </:body>
   <:footer>
     <tr>

@@ -18,18 +18,18 @@ export default class DcatDatasetsRoute extends Route {
     // This is a mirror image of <../../../controllers/dcat/datasets/index.js>. The code is duplicated here
     // because when the page is loaded, the `page` and `searchTerm` as they appear in the the query parameters
     // need to be used to restore the paginated search overview. Is there a better way?
-    const opts = {
+    const queryOptions = {
       page: {
         size: params.size < this.max_size ? params.size : this.max_size,
         number: params.page,
       },
       sort: 'modified',
-      include: 'distributions',
+      include: ['distributions', 'data-services'].join(','),
     };
     if (params.searchTerm) {
-      opts['filter[:or:]'] = params.searchTerm;
-      opts['filter[:or:][distributions]'] = params.searchTerm;
+      queryOptions['filter[:or:]'] = params.searchTerm;
+      queryOptions['filter[:or:][distributions]'] = params.searchTerm;
     }
-    return this.store.query('dataset', opts);
+    return this.store.query('dataset', queryOptions);
   }
 }
