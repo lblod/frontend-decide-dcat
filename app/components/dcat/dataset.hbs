@@ -89,7 +89,7 @@
         <AuList as |Item|>
           {{#each @dataset.dataServices as |service|}}
             <Item>
-              <AuLinkExternal @href={{service.endpointUrl}}>
+              <AuLinkExternal href={{service.endpointUrl}} @newTab={{true}}>
                 {{service.title}}
               </AuLinkExternal>
             </Item>
