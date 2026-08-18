@@ -89,9 +89,11 @@
         <AuList as |Item|>
           {{#each @dataset.dataServices as |service|}}
             <Item>
-              <AuLinkExternal href={{service.endpointUrl}} @newTab={{true}}>
-                {{service.title}}
-              </AuLinkExternal>
+              <AuLink
+                @route="dcat.dataservices.dataservice"
+                @model={{service}}
+                @icon="export"
+              >{{service.label}}</AuLink>
             </Item>
           {{/each}}
         </AuList>

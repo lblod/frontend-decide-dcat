@@ -1,0 +1,62 @@
+<AuTable>
+  <:title>Data Service</:title>
+  <:body>
+    <tr>
+      <td>Title</td>
+      <td>{{@service.title}}</td>
+    </tr>
+    <tr>
+      <td>Description</td>
+      <td>{{@service.description}}</td>
+    </tr>
+    <tr>
+      <td>Issued</td>
+      <td>{{@service.issued}}</td>
+    </tr>
+    <tr>
+      <td>Modified</td>
+      <td>{{@service.modified}}</td>
+    </tr>
+    <tr>
+      <td>License</td>
+      <td><AuLinkExternal
+          href={{@service.license}}
+        >{{@service.license}}</AuLinkExternal></td>
+    </tr>
+    <tr>
+      <td>Rights</td>
+      <td><AuLinkExternal
+          href={{@service.rights}}
+        >{{@service.rights}}</AuLinkExternal></td>
+    </tr>
+    <tr>
+      <td>Endpoint URL</td>
+      <td><AuLinkExternal
+          href={{@service.endpointUrl}}
+        >{{@service.endpointUrl}}</AuLinkExternal></td>
+    </tr>
+    <tr>
+      <td>Format</td>
+      <td><AuLinkExternal
+          href={{@service.format}}
+        >{{@service.format}}</AuLinkExternal></td>
+    </tr>
+    <tr>
+      <td>Conforms to</td>
+      <td><AuLinkExternal
+          href={{@service.conformTo}}
+        >{{@service.conformTo}}</AuLinkExternal></td>
+    </tr>
+  </:body>
+  <:footer>
+    <tr>
+      <td>Dataset</td>
+      <td><AuLink
+          @route="dcat.datasets.dataset"
+          @model={{@service.dataset}}
+          @icon="chevron-up"
+          @skin="secondary"
+        >{{@service.dataset.title}}</AuLink></td>
+    </tr>
+  </:footer>
+</AuTable>
