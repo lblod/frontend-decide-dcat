@@ -4,8 +4,8 @@ export default class DistributionModel extends Model {
   @attr uri;
   @attr title;
   @attr description;
-  @attr issued;
-  @attr modified;
+  @attr('date') issued;
+  @attr('date') modified;
   @attr license;
   @attr rights;
   @attr accessUrl;

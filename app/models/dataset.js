@@ -4,8 +4,8 @@ export default class DatasetModel extends Model {
   @attr uri;
   @attr title;
   @attr description;
-  @attr issued;
-  @attr modified;
+  @attr('date') issued;
+  @attr('date') modified;
   @attr identifier;
   @attr('string-array') keyword;
   @attr language;

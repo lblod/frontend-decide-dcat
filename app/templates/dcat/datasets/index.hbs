@@ -58,6 +58,25 @@
                             {{/each}}
                           </AuDropdown>
                         {{/if}}
+                        {{#if dataset.dataServices}}
+                          {{! template-lint-disable require-context-role }}
+                          <AuDropdown
+                            @title={{concat
+                              dataset.dataServices.length
+                              " data service"
+                              (if (not-eq dataset.dataServices.length 1) "s")
+                            }}
+                            @skin="secondary"
+                          >
+                            {{#each dataset.dataServices as |service|}}
+                              <AuButton @skin="link" role="menuitem"><AuLink
+                                  @skin="primary"
+                                  @route="dcat.dataservices.dataservice"
+                                  @model={{service}}
+                                >{{service.label}}</AuLink></AuButton>
+                            {{/each}}
+                          </AuDropdown>
+                        {{/if}}
                       </p>
                     </c.footer>
                   </AuCard>

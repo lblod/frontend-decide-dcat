@@ -11,6 +11,9 @@ Router.map(function () {
     this.route('distributions.distribution', {
       path: '/distributions/:distribution_id',
     });
+    this.route('dataservices.dataservice', {
+      path: '/dataservices/:dataservice_id',
+    });
     this.route('datasets', function () {
       this.route('index', { path: '' });
       this.route('dataset', { path: '/:dataset_id' });
