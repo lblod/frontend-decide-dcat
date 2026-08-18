@@ -5,8 +5,8 @@ export default class DataServiceModel extends Model {
   @attr('string') title;
   @attr('string') description;
   @attr('string') endpointUrl;
-  @attr('datetime') issued;
-  @attr('datetime') modified;
+  @attr('date') issued;
+  @attr('date') modified;
   @attr('string') conformTo;
 
   @belongsTo('dataset', { async: true, inverse: null }) dataset;
