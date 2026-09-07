@@ -8,7 +8,6 @@ export default class ReceiveCredentialRoute extends Route {
 
   async beforeModel(transition) {
     this.session.requireAuthentication(transition, () => {
-      console.log('foo');
       window.location.href = buildUrlFromConfig(ENV.acmidm);
     });
   }
