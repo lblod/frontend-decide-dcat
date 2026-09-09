@@ -4,7 +4,24 @@
     @brandLink="https://www.vlaanderen.be/nl"
     @homeRoute="index"
     @appTitle={{this.appTitle}}
-  />
+  >
+    <li class="au-c-list-horizontal__item">
+      {{#if this.session.isAuthenticated}}
+        <AuDropdown
+          @title={{this.currentSession.user.fullName}}
+          @buttonLabel="Account settings"
+          @alignment="right"
+          role="menu"
+        >
+          <AuLink @route="logout" @icon="logout" role="menuitem">
+            Afmelden
+          </AuLink>
+        </AuDropdown>
+      {{else}}
+        <LoginButton @isCompact={{true}} />
+      {{/if}}
+    </li>
+  </AuMainHeader>
   <AuMainContainer as |main|>
     <main.content>
       <AuToolbar @border="bottom" @size="small" @skin="tint">
