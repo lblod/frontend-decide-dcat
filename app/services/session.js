@@ -23,8 +23,10 @@ export default class DecideSessionService extends SessionService {
       // want that
       this.attemptedTransition = null;
       super.handleAuthentication('auth.receive-credential');
-    } else {
+    } else if (this.data.authenticated.authenticator.includes('acm-idm')) {
       super.handleAuthentication('auth.receive-credential');
+    } else {
+      super.handleAuthentication('dcat.datasets');
     }
   }
 
