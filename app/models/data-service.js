@@ -8,6 +8,7 @@ export default class DataServiceModel extends Model {
   @attr('date') issued;
   @attr('date') modified;
   @attr('string') conformTo;
+  @attr landingPage;
 
   @belongsTo('dataset', { async: true, inverse: null }) dataset;
 
